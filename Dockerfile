@@ -1,6 +1,6 @@
 FROM node:20-alpine
 RUN apk add --no-cache python3 g++ make
-WORKDIR app
+WORKDIR /app
 COPY . .
 RUN yarn install --production
-CMD [node, appsrcindex.js]
+CMD ["node", "/app/src/index.js"]
